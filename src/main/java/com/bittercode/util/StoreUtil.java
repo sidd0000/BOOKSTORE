@@ -7,9 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import com.bittercode.model.UserRole;
 
-/*
- * Store UTil File To Store Commonly used methods
- */
+
 public class StoreUtil {
 
     /**
@@ -39,7 +37,6 @@ public class StoreUtil {
         HttpSession session = req.getSession();
         if (selectedBookId != null) { // add item to the cart
 
-            // Items will contain comma separated bookIds that needs to be added in the cart
             String items = (String) session.getAttribute("items");
             if (req.getParameter("addToCart") != null) { // add to cart
                 if (items == null || items.length() == 0)

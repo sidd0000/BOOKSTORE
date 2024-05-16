@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.bittercode.model.UserRole;
 import com.bittercode.util.StoreUtil;
-//Http Servlet extended class for showing the about information
+
 public class AboutServlet extends HttpServlet {
 
     public void service(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
@@ -34,7 +34,7 @@ public class AboutServlet extends HttpServlet {
 
         } else {
             //If the user is not logged in, ask to login first
-            //Proceed only if logged in or forword to login page
+            //Proceed only if logged in or forword to login page yaad rakhna isme database match karana hai...isme koi galti nai karna siddhesh ji 😂😂
             RequestDispatcher rd = req.getRequestDispatcher("login.html");
             rd.include(req, res);
             pw.println("<table class=\"tab\"><tr><td>Please Login First to Continue!!</td></tr></table>");
